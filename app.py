@@ -56,7 +56,7 @@ def question():
 def result():
     global correct_answers, player_name
     final_score = correct_answers
-    reset_game()  # Reset game variables for new game
+    reset_game()  # Reset game variables for new gamee
     return render_template('result.html', final_score=final_score, player_name=player_name)
 
 

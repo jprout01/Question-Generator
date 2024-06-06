@@ -1,4 +1,4 @@
 # Question-Generator
 This will generate random question with options from csv file.
 <br>
-Author-Jyoti Prakash Rout
+Author-Jyoti Prakash Rout (college project)
