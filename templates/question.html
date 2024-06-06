@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Question</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        .rect {
+            background-color: aliceblue;
+            padding-top: 5%;
+            padding-bottom: 5%;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 10%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+        }
+        
+        form {
+            margin-top: 20px;
+        }
+        
+        input[type="radio"] {
+            margin-bottom: 10px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rect">
+            <h1>{{ question_text }}</h1>
+            <form method="post" action="/question">
+                {% for option in options %}
+                    <input type="radio" name="answer" value="{{ option }}"> {{ option }}<br>
+                {% endfor %}
+                <button type="submit">Submit Answer</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+</html>
